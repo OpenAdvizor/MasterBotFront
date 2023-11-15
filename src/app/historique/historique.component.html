@@ -1,0 +1,84 @@
+<div class="table-container">
+
+
+
+
+  <div class="example-container mat-elevation-z8">
+    <mat-table #table [dataSource]="servicesService.dataSource" matSort>
+
+      <!-- Checkbox Column -->
+      <ng-container matColumnDef="select">
+        <mat-header-cell *matHeaderCellDef>
+          <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+            [indeterminate]="selection.hasValue() && !isAllSelected()">
+          </mat-checkbox>
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
+            [checked]="selection.isSelected(row)">
+          </mat-checkbox>
+        </mat-cell>
+      </ng-container>
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="TRAINING_MATERIAL">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Training Material </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fields.training_material}} </mat-cell>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="TYPE_ACTION">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fields.type}} </mat-cell>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="CHARACTERS">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Characters </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fields.chars}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="LAST_TRAINED">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Last Trained </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.fields.last_trained}} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="STATE">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> State </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <span
+            [ngClass]="{'trained-style': element.fields.state === 'trained', 'not-trained-style': element.fields.state === 'not_trained'}">
+            {{ element.fields.state }}
+          </span>
+        </mat-cell>
+      </ng-container>
+
+
+
+      <ng-container matColumnDef="delete">
+        <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="deleteRow(row)" style="display: grid;place-items: center;">
+            <i class="fa-regular fa-trash-can" style="color: #db0000;font-size: 1.75rem;"></i>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="retrain">
+        <mat-header-cell *matHeaderCellDef> Retrain </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="retrainSelection(row)" style="display: grid;place-items: center;">
+            <i class="fa-solid fa-retweet" style="color: #41b55b;font-size: 1.75rem;"></i>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+      </mat-row>
+    </mat-table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+
+  </div>
+</div>

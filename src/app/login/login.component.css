@@ -1,0 +1,60 @@
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 7%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow:
+        1px 2px 2.2px rgba(0, 0, 0, 0.02),
+        2.3px 4.7px 5.3px rgba(0, 0, 0, 0.028),
+        4.4px 8.9px 10px rgba(0, 0, 0, 0.035),
+        7.8px 15.9px 17.9px rgba(0, 0, 0, 0.042),
+        14.6px 29.7px 33.4px rgba(0, 0, 0, 0.05),
+        35px 71px 80px rgba(0, 0, 0, 0.07);
+    border-radius: 7px;
+}
+
+.row>h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.col-sm-4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.col-sm-4>label {
+    font-size: 1.5rem;
+}
+
+.col-sm-4>input {
+    padding: .5rem;
+    border: none;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.col-sm-4>input:focus {
+    outline: none;
+    background-color: #bfbfbf;
+    border-bottom: 1px solid #000;
+}
+
+.col-sm-4>button {
+    background-color: #41b55b;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-block: 1rem;
+}
+
+.col-sm-4>button:hover {
+    background-color: #0c9d2c;
+}

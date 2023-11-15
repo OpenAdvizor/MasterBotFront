@@ -1,0 +1,21 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.items { background-color: grey; }
+
+/* COSTUM CSS */
+.container {
+  width: 45%;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container-steps{
+  min-height: 40vh ;
+}
+
+.container-steps>.items:hover {
+  color: #41b55b !important;
+}

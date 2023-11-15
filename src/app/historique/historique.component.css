@@ -1,0 +1,14 @@
+.trained-style {
+    color: #41b55b;
+    border: 1px solid #55be6c;
+    padding: 2px 8px;
+    border-radius: 7px;
+}
+
+.not-trained-style {
+    color: #e53c3c;
+    color: #e53c3c;
+    border: 1px solid #e53c3c;
+    padding: 2px 8px;
+    border-radius: 7px;
+}

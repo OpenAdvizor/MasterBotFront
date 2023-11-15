@@ -1,0 +1,26 @@
+<div class="example-container">
+
+  <form (ngSubmit)="uploadFile()" enctype="multipart/form-data" class="step1_container">
+
+    <div class="input_file">
+      <input type="file" id="file_chatbot" (change)="onFileSelected($event)" #fileInput style="display: none;">
+      <label for="file_chatbot">
+        <i class="fa-solid fa-inbox"></i>
+        <p>Click on this area to upload file</p>
+        <span>Click to select your PDF, CSV, DOCX or TXT file. (25 MB limit)</span>
+      </label>
+      <span *ngIf="selectedFile" style="font-weight: 600; font-size: 1.5rem;">
+        You have Selected: <span style="color: #41b55b;">{{ selectedFile.name }}</span>
+      </span>
+    </div>
+
+    <div class="prompt_container">
+      <label for="prompt">Enter your prompt</label>
+      <textarea id="prompt" matInput [formControl]="prompt" required style="resize: vertical;"></textarea>
+    </div>
+
+    <button type="submit" class="upload_button">Upload</button>
+
+  </form>
+
+</div>

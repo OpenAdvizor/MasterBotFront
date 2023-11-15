@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="title">
+    <span class="sub-title">Training Materials</span>
+    <span class="title_chips">Tips</span>
+    <button mat-icon-button (click)="logOut()">log out</button>
+  </div>
+
+  <div class="company">
+    <span class="Buisness"> Buisness Name : </span>
+    <span>
+      <input matInput [(ngModel)]="companyName" class="input-update-name" placeholder="New Name" />
+    </span>
+    <button mat-icon-button class="edit-button" style="display: grid;place-items: center;"
+      (click)="updateCompanyName()">
+      <i class="fa-regular fa-pen-to-square"></i>
+    </button>
+    <div *ngIf="showMessage">
+      <span class="updated-notif">
+        Name updated successfully !
+      </span>
+    </div>
+  </div>
+
+  <!-- <div *ngIf="openEditField" class="updateNameModal">
+    <mat-form-field>
+      <input matInput [(ngModel)]="newName" placeholder="New Name" />
+    </mat-form-field>
+    <button mat-button (click)="updateCompanyName()">Save</button>
+  </div> -->
+
+</div>

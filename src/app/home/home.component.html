@@ -1,0 +1,15 @@
+<app-header />
+
+<div class="step1_container">
+    <h3>Step 1 : Upload</h3>
+    <app-my-tabs></app-my-tabs>
+</div>
+
+<div class="step2_container">
+    <h3>Step 2 : Train</h3>
+    <div class="table_options">
+        <button mat-raised-button (click)="selectTrained()">Select Trained</button>
+        <button mat-raised-button (click)="selectUntrained()">select Untraind</button>
+    </div>
+    <app-historique></app-historique>
+</div>

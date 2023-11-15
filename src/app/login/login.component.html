@@ -1,0 +1,14 @@
+<div class="row">
+    <h2>Log In</h2>
+    <div class="col-sm-4">
+        <label>Email:</label><br />
+        <input type="text" name="login-username" [(ngModel)]="user.email" placeholder="Enter your email ">
+    </div>
+    <div class="col-sm-4">
+        <label>Password:</label><br />
+        <input type="password" name="login-password" [(ngModel)]="user.password" placeholder="Enter your password" >
+    </div>
+    <div class="col-sm-4">
+        <button (click)="login()" class="btn btn-primary">Log In</button>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+.app_container {
+    height: max-content;
+    position: relative;
+}
+
+.step1_container {
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow:
+        1px 2px 2.2px rgba(0, 0, 0, 0.02),
+        2.3px 4.7px 5.3px rgba(0, 0, 0, 0.028),
+        4.4px 8.9px 10px rgba(0, 0, 0, 0.035),
+        7.8px 15.9px 17.9px rgba(0, 0, 0, 0.042),
+        14.6px 29.7px 33.4px rgba(0, 0, 0, 0.05),
+        35px 71px 80px rgba(0, 0, 0, 0.07);
+}
+
+
+.step1_container>h3 {
+    margin: 0;
+}
+
+.step2_container {
+    padding-bottom: 3%;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow:
+        1px 2px 2.2px rgba(0, 0, 0, 0.02),
+        2.3px 4.7px 5.3px rgba(0, 0, 0, 0.028),
+        4.4px 8.9px 10px rgba(0, 0, 0, 0.035),
+        7.8px 15.9px 17.9px rgba(0, 0, 0, 0.042),
+        14.6px 29.7px 33.4px rgba(0, 0, 0, 0.05),
+        35px 71px 80px rgba(0, 0, 0, 0.07);
+}
+
+.step2_container>h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.table_options {
+    display: flex;
+    gap: 1rem;
+}
+
+.table_options>* {
+    background-color: #fff;
+    box-shadow: none;
+    padding: 4px 16px;
+    border: 2px solid #dbdbdb;
+    border-radius: 14px;
+    font-weight: 600;
+    color: #4e4e4e;
+}
+
+.mat-elevation-z8 {
+    margin-top: 2% !important;
+    width: 95%;
+    margin-inline: auto !important;
+}
+
+.step_container>h3 {
+    font-weight: 700;
+}

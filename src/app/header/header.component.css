@@ -1,0 +1,68 @@
+.edit-button {
+  color: #1d9b0c;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.title>button {
+  margin-left: auto;
+  width: max-content;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1px 18px;
+  border: 2px solid #bfbfbf;
+  border-radius: 7px;
+  transition: ease-in-out 300ms;
+}
+
+.title>button:hover {
+  background-color: #1d9b0c;
+  color: #fff;
+}
+
+.title_chips {
+  font-weight: 600;
+  color: #626262;
+  padding: 4px 16px;
+  border: 2px solid #bfbfbf;
+  border-radius: 21px;
+  margin-top: 4px;
+}
+
+.sub-title {
+  font-weight: 700;
+  font-size: 1.75rem;
+  padding-left: 2%;
+  margin-right: 2rem;
+}
+
+.Buisness {
+  font-weight: 600;
+  font-size: medium;
+  padding-left: 2%;
+
+}
+
+.input-update-name {
+  border: none;
+  background-color: #dedede;
+  width: 15ch !important;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+
+.updated-notif {
+  color: #fff;
+  background-color: #41b55b;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 7px;
+}
